@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Elvin Aliyev — C# / .NET Backend Developer &amp; Software Engineering Instructor</title>
+  <meta name="description"
+    content="Elvin Aliyev — C# / .NET Backend Developer from Baku, Azerbaijan. Scalable REST APIs, microservices, real-time systems, Clean Architecture, DDD & CQRS with ASP.NET Core and EF Core." />
+  <meta name="author" content="Elvin Aliyev" />
+  <meta name="theme-color" content="#010306" />
+  <meta property="og:title" content="Elvin Aliyev — .NET Backend Developer" />
+  <meta property="og:description"
+    content="Scalable ASP.NET Core backends, microservices, real-time systems and Clean Architecture." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+<style id="compiled-tailwind">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.\!visible{visibility:visible!important}.visible{visibility:visible}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.-bottom-32{bottom:-8rem}.-left-32{left:-8rem}.-left-40{left:-10rem}.-right-12{right:-3rem}.-right-32{right:-8rem}.-top-12{top:-3rem}.-top-32{top:-8rem}.-top-40{top:-10rem}.bottom-6{bottom:1.5rem}.left-0{left:0}.left-1\/2{left:50%}.top-0{top:0}.top-\[35\%\]{top:35%}.top-\[70\%\]{top:70%}.isolate{isolation:isolate}.z-0{z-index:0}.z-10{z-index:10}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-12{margin-top:3rem;margin-bottom:3rem}.mb-1{margin-bottom:.25rem}.mb-10{margin-bottom:2.5rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.contents{display:contents}.hidden{display:none}.h-10{height:2.5rem}.h-12{height:3rem}.h-16{height:4rem}.h-2{height:.5rem}.h-2\.5{height:.625rem}.h-24{height:6rem}.h-5{height:1.25rem}.h-80{height:20rem}.h-9{height:2.25rem}.h-\[36rem\]{height:36rem}.h-\[42rem\]{height:42rem}.h-\[48rem\]{height:48rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-10{width:2.5rem}.w-12{width:3rem}.w-16{width:4rem}.w-2{width:.5rem}.w-2\.5{width:.625rem}.w-24{width:6rem}.w-5{width:1.25rem}.w-80{width:20rem}.w-9{width:2.25rem}.w-\[42rem\]{width:42rem}.w-\[48rem\]{width:48rem}.w-\[65rem\]{width:65rem}.w-\[min\(92\%\2c 28rem\)\]{width:min(92%,28rem)}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.min-w-0{min-width:0}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-\[16rem\]{max-width:16rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2,.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes ping{75%,to{transform:scale(2);opacity:0}}.animate-ping{animation:ping 1s cubic-bezier(0,0,.2,1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}.resize{resize:both}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.items-baseline{align-items:baseline}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.overflow-hidden{overflow:hidden}.overflow-x-hidden{overflow-x:hidden}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rounded{border-radius:.25rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-primary\/20{border-color:rgba(16,185,129,.2)}.border-primary\/30{border-color:rgba(16,185,129,.3)}.border-secondary\/20{border-color:rgba(6,182,212,.2)}.border-secondary\/30{border-color:rgba(6,182,212,.3)}.border-tertiary\/20{border-color:rgba(56,189,248,.2)}.border-tertiary\/30{border-color:rgba(56,189,248,.3)}.border-white\/10{border-color:hsla(0,0%,100%,.1)}.border-white\/20{border-color:hsla(0,0%,100%,.2)}.border-white\/5{border-color:hsla(0,0%,100%,.05)}.bg-\[\#010306\]{--tw-bg-opacity:1;background-color:rgb(1 3 6/var(--tw-bg-opacity,1))}.bg-black\/30{background-color:rgba(0,0,0,.3)}.bg-black\/40{background-color:rgba(0,0,0,.4)}.bg-primary{--tw-bg-opacity:1;background-color:rgb(16 185 129/var(--tw-bg-opacity,1))}.bg-primary\/10{background-color:rgba(16,185,129,.1)}.bg-primary\/20{background-color:rgba(16,185,129,.2)}.bg-secondary{--tw-bg-opacity:1;background-color:rgb(6 182 212/var(--tw-bg-opacity,1))}.bg-secondary\/10{background-color:rgba(6,182,212,.1)}.bg-secondary\/20{background-color:rgba(6,182,212,.2)}.bg-tertiary\/10{background-color:rgba(56,189,248,.1)}.bg-tertiary\/20{background-color:rgba(56,189,248,.2)}.bg-white\/10{background-color:hsla(0,0%,100%,.1)}.bg-white\/5{background-color:hsla(0,0%,100%,.05)}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-bl{background-image:linear-gradient(to bottom left,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-tr{background-image:linear-gradient(to top right,var(--tw-gradient-stops))}.from-\[\#10B981\],.from-primary{--tw-gradient-from:#10b981 var(--tw-gradient-from-position);--tw-gradient-to:rgba(16,185,129,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-primary\/30{--tw-gradient-from:rgba(16,185,129,.3) var(--tw-gradient-from-position);--tw-gradient-to:rgba(16,185,129,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-\[\#063B29\]\/25{--tw-gradient-to:rgba(6,59,41,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(6,59,41,.25) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-\[\#06B6D4\]{--tw-gradient-to:rgba(6,182,212,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#06b6d4 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-\[\#0A192F\]\/30{--tw-gradient-to:rgba(10,25,47,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(10,25,47,.3) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-secondary{--tw-gradient-to:rgba(6,182,212,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#06b6d4 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-secondary\/20{--tw-gradient-to:rgba(6,182,212,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(6,182,212,.2) var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-\[\#1D4ED8\]{--tw-gradient-to:#1d4ed8 var(--tw-gradient-to-position)}.to-\[\#38BDF8\]{--tw-gradient-to:#38bdf8 var(--tw-gradient-to-position)}.to-tertiary\/20{--tw-gradient-to:rgba(56,189,248,.2) var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.bg-clip-text{-webkit-background-clip:text;background-clip:text}.fill-current{fill:currentColor}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.pb-20{padding-bottom:5rem}.pb-4{padding-bottom:1rem}.pt-16{padding-top:4rem}.pt-2{padding-top:.5rem}.pt-24{padding-top:6rem}.pt-28{padding-top:7rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.font-body{font-family:Manrope,sans-serif}.font-code{font-family:IBM Plex Mono,monospace}.font-display{font-family:Space Grotesk,sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-\[15px\]{font-size:15px}.text-\[16px\]{font-size:16px}.text-\[18px\]{font-size:18px}.text-\[20px\]{font-size:20px}.text-\[22px\]{font-size:22px}.text-\[24px\]{font-size:24px}.text-\[32px\]{font-size:32px}.text-\[36px\]{font-size:36px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-\[0\.25em\]{letter-spacing:.25em}.tracking-\[0\.3em\]{letter-spacing:.3em}.tracking-tight{letter-spacing:-.025em}.tracking-wide{letter-spacing:.025em}.tracking-wider{letter-spacing:.05em}.tracking-widest{letter-spacing:.1em}.text-\[\#dde3ee\]{--tw-text-opacity:1;color:rgb(221 227 238/var(--tw-text-opacity,1))}.text-blue-300{--tw-text-opacity:1;color:rgb(147 197 253/var(--tw-text-opacity,1))}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238/var(--tw-text-opacity,1))}.text-cyan-400\/80{color:rgba(34,211,238,.8)}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153/var(--tw-text-opacity,1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235/var(--tw-text-opacity,1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-primary{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.text-primary\/80{color:rgba(16,185,129,.8)}.text-secondary{--tw-text-opacity:1;color:rgb(6 182 212/var(--tw-text-opacity,1))}.text-secondary\/80{color:rgba(6,182,212,.8)}.text-tertiary{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.text-tertiary\/80{color:rgba(56,189,248,.8)}.text-transparent{color:transparent}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.opacity-75{opacity:.75}.opacity-80{opacity:.8}.shadow-\[0_0_20px_rgba\(16\2c 185\2c 129\2c 0\.3\)\]{--tw-shadow:0 0 20px rgba(16,185,129,.3);--tw-shadow-colored:0 0 20px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_20px_rgba\(6\2c 182\2c 212\2c 0\.2\)\]{--tw-shadow:0 0 20px rgba(6,182,212,.2);--tw-shadow-colored:0 0 20px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_25px_rgba\(16\2c 185\2c 129\2c 0\.2\)\]{--tw-shadow:0 0 25px rgba(16,185,129,.2);--tw-shadow-colored:0 0 25px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_25px_rgba\(16\2c 185\2c 129\2c 0\.3\)\]{--tw-shadow:0 0 25px rgba(16,185,129,.3);--tw-shadow-colored:0 0 25px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_25px_rgba\(16\2c 185\2c 129\2c 0\.35\)\]{--tw-shadow:0 0 25px rgba(16,185,129,.35);--tw-shadow-colored:0 0 25px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_30px_rgba\(16\2c 185\2c 129\2c 0\.4\)\]{--tw-shadow:0 0 30px rgba(16,185,129,.4);--tw-shadow-colored:0 0 30px var(--tw-shadow-color)}.shadow-\[0_0_30px_rgba\(16\2c 185\2c 129\2c 0\.4\)\],.shadow-\[0_0_8px_\#06B6D4\]{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_0_8px_\#06B6D4\]{--tw-shadow:0 0 8px #06b6d4;--tw-shadow-colored:0 0 8px var(--tw-shadow-color)}.shadow-\[0_15px_40px_rgba\(0\2c 0\2c 0\2c 0\.8\)\]{--tw-shadow:0 15px 40px rgba(0,0,0,.8);--tw-shadow-colored:0 15px 40px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_20px_50px_rgba\(0\2c 0\2c 0\2c 0\.7\)\]{--tw-shadow:0 20px 50px rgba(0,0,0,.7);--tw-shadow-colored:0 20px 50px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline{outline-style:solid}.ring{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.blur{--tw-blur:blur(8px)}.blur,.blur-\[100px\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-\[100px\]{--tw-blur:blur(100px)}.blur-\[160px\]{--tw-blur:blur(160px)}.blur-\[160px\],.blur-\[170px\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-\[170px\]{--tw-blur:blur(170px)}.blur-\[180px\]{--tw-blur:blur(180px)}.blur-\[180px\],.blur-xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-xl{--tw-blur:blur(24px)}.drop-shadow{--tw-drop-shadow:drop-shadow(0 1px 2px rgba(0,0,0,.1)) drop-shadow(0 1px 1px rgba(0,0,0,.06))}.drop-shadow,.drop-shadow-\[0_0_10px_\#10B981\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_0_10px_\#10B981\]{--tw-drop-shadow:drop-shadow(0 0 10px #10b981)}.drop-shadow-\[0_0_15px_rgba\(16\2c 185\2c 129\2c 0\.5\)\]{--tw-drop-shadow:drop-shadow(0 0 15px rgba(16,185,129,.5))}.drop-shadow-\[0_0_15px_rgba\(16\2c 185\2c 129\2c 0\.5\)\],.drop-shadow-\[0_0_15px_rgba\(56\2c 189\2c 248\2c 0\.5\)\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_0_15px_rgba\(56\2c 189\2c 248\2c 0\.5\)\]{--tw-drop-shadow:drop-shadow(0 0 15px rgba(56,189,248,.5))}.drop-shadow-\[0_0_15px_rgba\(6\2c 182\2c 212\2c 0\.5\)\]{--tw-drop-shadow:drop-shadow(0 0 15px rgba(6,182,212,.5))}.drop-shadow-\[0_0_15px_rgba\(6\2c 182\2c 212\2c 0\.5\)\],.drop-shadow-\[0_0_40px_rgba\(6\2c 182\2c 212\2c 0\.25\)\]{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0_0_40px_rgba\(6\2c 182\2c 212\2c 0\.25\)\]{--tw-drop-shadow:drop-shadow(0 0 40px rgba(6,182,212,.25))}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-300{transition-duration:.3s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.selection\:bg-primary\/30 ::-moz-selection{background-color:rgba(16,185,129,.3)}.selection\:bg-primary\/30 ::selection{background-color:rgba(16,185,129,.3)}.selection\:text-white ::-moz-selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:text-white ::selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:bg-primary\/30::-moz-selection{background-color:rgba(16,185,129,.3)}.selection\:bg-primary\/30::selection{background-color:rgba(16,185,129,.3)}.selection\:text-white::-moz-selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05}.hover\:scale-105:hover,.hover\:scale-110:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-110:hover{--tw-scale-x:1.1;--tw-scale-y:1.1}.hover\:border-primary\/40:hover{border-color:rgba(16,185,129,.4)}.hover\:border-secondary\/40:hover{border-color:rgba(6,182,212,.4)}.hover\:bg-white\/5:hover{background-color:hsla(0,0%,100%,.05)}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.hover\:text-secondary:hover{--tw-text-opacity:1;color:rgb(6 182 212/var(--tw-text-opacity,1))}.hover\:text-tertiary:hover{--tw-text-opacity:1;color:rgb(56 189 248/var(--tw-text-opacity,1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.hover\:brightness-110:hover{--tw-brightness:brightness(1.1);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95}.active\:scale-95:active,.group:hover .group-hover\:translate-x-0\.5{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-0\.5{--tw-translate-x:0.125rem}.group:hover .group-hover\:rotate-45{--tw-rotate:45deg}.group:hover .group-hover\:rotate-45,.group:hover .group-hover\:scale-105{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05}.group:hover .group-hover\:scale-150{--tw-scale-x:1.5;--tw-scale-y:1.5;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-primary{--tw-text-opacity:1;color:rgb(16 185 129/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-secondary{--tw-text-opacity:1;color:rgb(6 182 212/var(--tw-text-opacity,1))}.group:hover .group-hover\:text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width:640px){.sm\:inline{display:inline}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:p-10{padding:2.5rem}.sm\:p-12{padding:3rem}.sm\:px-12{padding-left:3rem;padding-right:3rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-5xl{font-size:3rem;line-height:1}.sm\:text-7xl{font-size:4.5rem;line-height:1}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-xs{font-size:.75rem;line-height:1rem}}@media (min-width:768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:flex-row{flex-direction:row}.md\:justify-start{justify-content:flex-start}.md\:text-left{text-align:left}}@media (min-width:1024px){.lg\:sticky{position:sticky}.lg\:top-28{top:7rem}.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:w-80{width:20rem}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:flex-row{flex-direction:row}.lg\:p-16{padding:4rem}.lg\:px-20{padding-left:5rem;padding-right:5rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}.lg\:py-24{padding-top:6rem;padding-bottom:6rem}.lg\:text-8xl{font-size:6rem;line-height:1}.lg\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:1280px){.xl\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}</style>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #010306;
+      color: #dde3ee;
+    }
+
+    body {
+      overscroll-behavior: none;
+    }
+
+    html {
+      scrollbar-width: none;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Lenis */
+    html.lenis,
+    html.lenis body {
+      height: auto;
+    }
+
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+
+    /* Glassmorphism */
+    .cosmic-glass {
+      background: rgba(10, 18, 30, 0.45);
+      backdrop-filter: blur(35px) saturate(200%);
+      -webkit-backdrop-filter: blur(35px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 1px 1px 0 rgba(255, 255, 255, 0.18), inset -1px -1px 0 rgba(16, 185, 129, 0.25);
+    }
+
+    .cosmic-glass-hover {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cosmic-glass-hover:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 25px 60px rgba(6, 182, 212, 0.2), inset 1px 1px 0 rgba(255, 255, 255, 0.3), inset -1px -1px 0 rgba(16, 185, 129, 0.4);
+    }
+
+    /* Cosmic WebGL background */
+    #cosmos {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    #cosmos canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Nav */
+    .nav-link {
+      position: relative;
+      padding: 4px 0;
+      color: #9ca3af;
+      transition: color .3s, filter .3s;
+    }
+
+    .nav-link:hover {
+      color: #fff;
+      filter: drop-shadow(0 0 10px rgba(6, 182, 212, .8));
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 2px;
+      background: #10B981;
+      box-shadow: 0 0 8px #10B981;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .45s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .nav-link.active {
+      color: #fff;
+    }
+
+    .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    /* Orbital stage */
+    #orbit-stage {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 720px;
+      max-height: 1000px;
+      isolation: isolate;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: pan-y;
+      cursor: grab;
+    }
+
+    #orbit-stage.is-dragging {
+      cursor: grabbing;
+    }
+
+    #orbit-stage a {
+      -webkit-user-drag: none;
+    }
+
+    #blackhole-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 20;
+      pointer-events: none;
+      display: block;
+    }
+
+    #orbit-path {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    #orbit-path .dash {
+      stroke-dasharray: 4 10;
+      animation: dash-flow 18s linear infinite;
+    }
+
+    @keyframes dash-flow {
+      to {
+        stroke-dashoffset: -280;
+      }
+    }
+
+    .orbit-card {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: min(86vw, 25rem);
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      will-change: transform, opacity;
+      transform-origin: center center;
+      backdrop-filter: blur(22px) saturate(180%);
+      -webkit-backdrop-filter: blur(22px) saturate(180%);
+      transition: border-color .4s ease, box-shadow .4s ease;
+    }
+
+    .orbit-card.is-front {
+      border-color: rgba(var(--accent-rgb), .45);
+      box-shadow: 0 25px 70px rgba(var(--accent-rgb), .22), 0 20px 50px rgba(0, 0, 0, .7), inset 1px 1px 0 rgba(255, 255, 255, .25), inset -1px -1px 0 rgba(var(--accent-rgb), .45);
+    }
+
+    .orbit-card:hover {
+      border-color: rgba(var(--accent-rgb), .65);
+    }
+
+    .oc-glow {
+      position: absolute;
+      top: -4rem;
+      right: -4rem;
+      width: 9rem;
+      height: 9rem;
+      border-radius: 9999px;
+      background: rgba(var(--accent-rgb), .25);
+      filter: blur(28px);
+      pointer-events: none;
+    }
+
+    .oc-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .5rem;
+      padding-bottom: .75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .66rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .oc-tag {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .oc-status {
+      color: #9ca3af;
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      white-space: nowrap;
+    }
+
+    .oc-status i {
+      width: 6px;
+      height: 6px;
+      border-radius: 9999px;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: blink 2.2s ease-in-out infinite;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: .35;
+      }
+    }
+
+    .oc-title {
+      position: relative;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #fff;
+      margin-top: .9rem;
+      line-height: 1.2;
+      transition: color .3s;
+    }
+
+    .orbit-card:hover .oc-title {
+      color: var(--accent);
+    }
+
+    .oc-sub {
+      display: block;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: .3rem;
+      opacity: .9;
+    }
+
+    .orbit-card:hover .oc-sub {
+      color: #e5e7eb;
+    }
+
+    .oc-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+      vertical-align: middle;
+      margin-left: .5rem;
+      padding: .1rem .45rem;
+      border-radius: 9999px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      color: #010306;
+      background: linear-gradient(90deg, #10B981, #06B6D4);
+    }
+
+    .oc-desc {
+      position: relative;
+      font-size: .8rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-top: .65rem;
+    }
+
+    .oc-badges {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-top: .9rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .oc-badges li {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .64rem;
+      padding: .25rem .55rem;
+      border-radius: .45rem;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .1);
+      color: #d1d5db;
+    }
+
+    .oc-badges li:first-child {
+      color: var(--accent);
+      border-color: rgba(var(--accent-rgb), .3);
+    }
+
+    .oc-foot {
+      position: relative;
+      margin-top: 1rem;
+      padding-top: .8rem;
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: .5rem;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: .7rem;
+    }
+
+    .oc-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      color: #fff;
+      font-weight: 600;
+      transition: color .3s;
+    }
+
+    .oc-link:hover {
+      color: var(--accent);
+    }
+
+    .oc-link svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .oc-repo {
+      color: #6b7280;
+      font-size: .66rem;
+    }
+
+    .orbit-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, .18);
+      transition: all .4s cubic-bezier(.16, 1, .3, 1);
+    }
+
+    .orbit-dot.active {
+      width: 22px;
+      background: linear-gradient(90deg, #10B981, #06B6D4);
+      box-shadow: 0 0 10px rgba(16, 185, 129, .7);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      #orbit-path .dash,
+      .oc-status i {
+        animation: none;
+      }
+    }
+
+    html { scroll-padding-top: 100px; }
+    body { overflow-x: clip; }
+    :focus-visible { outline: 2px solid #06B6D4; outline-offset: 5px; }
+    .skip-link { position:fixed; top:8px; left:16px; z-index:100; padding:12px; background:#063B29; transform:translateY(-180%); }
+    .skip-link:focus { transform:none; }
+    body > header::before { content:''; position:absolute; inset:0 0 -24px; z-index:-1; background:linear-gradient(#010306e8, #010306a0 65%, transparent); pointer-events:none; }
+    #mobile-menu[hidden] { display:none; }
+    #mobile-menu { position:absolute; top:80px; left:24px; right:24px; padding:20px; border-radius:20px; display:grid; gap:18px; background:rgba(5,11,20,.97); }
+    .orbit-tools { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:24px 0 8px; }
+    .orbit-tools button { padding:10px 18px; border-radius:12px; color:#dde3ee; font:12px 'IBM Plex Mono',monospace; }
+    .orbit-tools button[aria-pressed=true] { color:#10B981; border-color:#10B98166; }
+    #orbit-stage { overflow:clip; min-height:1000px; }
+    @media(min-width:768px) { .orbit-card { width: min(38vw, 22rem); } }
+    #orbit-stage.is-list { height:auto; min-height:0; max-height:none; padding:24px 0; overflow:visible; cursor:auto; }
+    #orbit-stage.is-list #orbit-cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
+    #orbit-stage.is-list .orbit-card { position:relative; left:auto; top:auto; width:100%; transform:none!important; opacity:1!important; filter:none!important; pointer-events:auto!important; user-select:text; }
+    #orbit-stage.is-list #blackhole-core, #orbit-stage.is-list #orbit-path, #orbit-stage.is-list #orbit-hud { display:none; }
+    .orbit-dot { position:relative; min-height:24px; background:transparent!important; box-shadow:none!important; }
+    .orbit-dot::after { content:''; position:absolute; inset:8px 0; border-radius:8px; background:#ffffff44; }
+    .orbit-dot.active::after { background:linear-gradient(90deg,#10B981,#06B6D4); }
+    #orbit-name { max-width:min(16rem,52vw); }
+    @media(max-width:767px) {
+      body > header { padding:18px 16px; }
+      #nav-brand > div:last-child > span:last-child { font-size:8px; }
+      #nav-contact { display:none; }
+      #orbit-stage { height:850px; min-height:850px; }
+      .orbit-card { width:min(82vw,25rem); padding:1.1rem; }
+      .oc-head { font-size:.57rem; letter-spacing:.06em; }
+      .oc-repo { display:none; }
+      #orbit-stage.is-list #orbit-cards { grid-template-columns:1fr; }
+      #orbit-stage.is-list { min-height:0; }
+    }
+    @media(prefers-reduced-motion:reduce) { *, *::before, *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+  </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.3.27/dist/lenis.min.js"></script>
+
+  <style id="glass-action-buttons">
+    #nav-contact, #hero-contact, #hero-cv, #cv-download {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(16,185,129,.14), rgba(6,182,212,.08) 55%, rgba(29,78,216,.16));
+      border: 1px solid rgba(167,243,232,.3);
+      border-top-color: rgba(220,255,250,.48);
+      border-bottom-color: rgba(6,182,212,.2);
+      backdrop-filter: blur(24px) saturate(160%);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.14), inset 0 -1px 12px rgba(6,182,212,.06), 0 8px 24px rgba(0,0,0,.3), 0 0 18px rgba(16,185,129,.08);
+      color: #e8fffa;
+      transition: background .25s ease, border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+    }
+    #nav-contact > .absolute { display: none; }
+    #nav-contact::before, #hero-contact::before, #hero-cv::before, #cv-download::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(165deg, rgba(255,255,255,.12), rgba(255,255,255,.025) 45%, transparent 46%);
+    }
+    #nav-contact:hover, #hero-contact:hover, #hero-cv:hover, #cv-download:hover {
+      background: linear-gradient(135deg, rgba(16,185,129,.22), rgba(6,182,212,.14) 55%, rgba(29,78,216,.22));
+      border-color: rgba(167,243,232,.55);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.24), inset 0 -1px 14px rgba(6,182,212,.1), 0 10px 28px rgba(0,0,0,.3), 0 0 24px rgba(6,182,212,.15);
+    }
+  </style>
+
+  <style id="portfolio-typography">
+    body, .font-body, .oc-desc { font-family: 'Manrope', sans-serif; }
+    h1, h2, h3, h4, .font-display, .oc-title { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -.035em; }
+    #hero h1 { font-weight: 700; letter-spacing: -.055em; line-height: 1.08; }
+    .oc-title { font-weight: 700; letter-spacing: -.025em; }
+    .oc-sub { font-family: 'Manrope', sans-serif; letter-spacing: 0; line-height: 1.45; }
+    .font-code, .oc-head, .oc-badges, .oc-foot, .orbit-tools button { font-family: 'IBM Plex Mono', monospace; }
+    #nav-brand .font-code:first-child { font-family: 'Space Grotesk', sans-serif; font-weight: 700; letter-spacing: -.02em; }
+    #hero > p { line-height: 1.8; letter-spacing: -.015em; }
+    .oc-desc { line-height: 1.7; }
+    [data-count] { font-variant-numeric: tabular-nums; font-weight: 700; }
+    #nav-contact, #hero-contact, #hero-cv, #cv-download { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: .015em; }
+    @media(max-width:479px) { #hero h1 { font-size: clamp(2.3rem, 10.5vw, 3rem); } }
+  </style>
+</head>
+
+<body
+  class="bg-[#010306] text-[#dde3ee] font-body min-h-screen relative overflow-x-hidden selection:bg-primary/30 selection:text-white">
+
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path
+        d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <path
+        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+    </symbol>
+  </svg>
+
+  <!-- Ambient optical nebula glow (under the WebGL canvas) -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+    <div
+      class="absolute -top-40 left-1/2 -translate-x-1/2 w-[65rem] h-[36rem] bg-gradient-to-b from-[#06B6D4]/12 via-[#10B981]/8 to-transparent blur-[160px] rounded-full">
+    </div>
+    <div
+      class="absolute top-[35%] -left-40 w-[42rem] h-[42rem] bg-gradient-to-tr from-[#1D4ED8]/16 via-[#063B29]/25 to-transparent blur-[170px] rounded-full">
+    </div>
+    <div
+      class="absolute top-[70%] -right-32 w-[48rem] h-[48rem] bg-gradient-to-bl from-[#10B981]/12 via-[#0A192F]/30 to-transparent blur-[180px] rounded-full">
+    </div>
+  </div>
+
+  <!-- Three.js deep-space universe (custom shader particles) -->
+  <div id="cosmos" aria-hidden="true"></div>
+
+  <!-- BORDERLESS FLOATING TOP NAVIGATION -->
+  <header class="fixed top-0 left-0 w-full z-50 pointer-events-none pt-6 px-6 sm:px-12 lg:px-20">
+    <div class="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto" data-intro>
+      <a id="nav-brand" class="group flex items-center gap-3" href="#hero">
+        <div
+          class="relative w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center transition-transform group-hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+          <span
+            class="material-symbols-outlined text-primary text-[22px] group-hover:text-secondary transition-colors">token</span>
+        </div>
+        <div class="flex flex-col">
+          <span
+            class="font-code text-sm font-bold tracking-tight text-white group-hover:text-primary transition-colors">ELVIN<span
+              class="text-secondary">.DEV</span></span>
+          <span class="font-code text-[10px] text-gray-400 tracking-wider">.NET BACKEND ARCHITECT</span>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center gap-8 font-code text-xs tracking-wider uppercase" aria-label="Primary">
+        <a id="nav-home" class="nav-link active" data-nav="hero" href="#hero">Home</a>
+        <a id="nav-about" class="nav-link" data-nav="spec" href="#spec">About</a>
+        <a id="nav-projects" class="nav-link" data-nav="orbital-showcase" href="#orbital-showcase">Projects</a>
+        <a id="nav-cv" class="nav-link" data-nav="cv-telemetry" href="#cv-telemetry">CV</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden cosmic-glass rounded-xl px-4 py-3 font-code text-xs" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+      <div class="flex items-center gap-4">
+        <a id="nav-contact"
+          class="relative group px-5 py-2.5 rounded-full font-code text-xs font-bold text-white tracking-wide transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2 overflow-hidden shadow-[0_0_25px_rgba(16,185,129,0.35)]"
+          href="#contact">
+          <span
+            class="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-[#1D4ED8] opacity-80 group-hover:opacity-100 transition-opacity"></span>
+          <span class="relative z-10 flex items-center gap-2">
+            <span>Contact</span>
+            <span
+              class="material-symbols-outlined text-[15px] group-hover:translate-x-0.5 transition-transform">send</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <nav id="mobile-menu" class="cosmic-glass pointer-events-auto font-code text-sm md:hidden" aria-label="Mobile navigation" hidden>
+      <a href="#hero">Home</a><a href="#spec">About</a><a href="#orbital-showcase">Projects</a><a href="#cv-telemetry">CV</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <a class="skip-link" href="#hero">Skip to content</a>
+  <main class="relative z-10 w-full pt-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- SECTION 1: HERO -->
+    <section class="relative w-full py-16 lg:py-24 flex flex-col items-center text-center" id="hero">
+      <div
+        class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full cosmic-glass shadow-[0_0_25px_rgba(16,185,129,0.2)] mb-8"
+        data-intro>
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+        </span>
+        <span class="font-code text-[10px] sm:text-xs font-medium uppercase tracking-widest text-primary">C# / .NET
+          Backend Developer &amp; Technical Mentor</span>
+      </div>
+
+      <div class="flex flex-col items-center gap-2 max-w-4xl">
+        <span class="font-code text-xs uppercase tracking-[0.3em] text-cyan-400/80" data-intro>TERMINAL IDENTITY //
+          0x454C56494E</span>
+        <h1
+          class="font-display text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white drop-shadow-[0_0_40px_rgba(6,182,212,0.25)]"
+          data-intro>
+          Elvin <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-[#10B981] via-[#06B6D4] to-[#38BDF8]">Aliyev</span>
+        </h1>
+        <span class="font-code text-xs sm:text-sm text-gray-400 mt-2 flex items-center gap-2" data-intro>
+          <span class="material-symbols-outlined text-secondary text-[16px]">location_on</span> Baku, Azerbaijan
+        </span>
+      </div>
+
+      <p class="font-body text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mt-6 leading-relaxed" data-intro>
+        Final-year Computer Engineering student at <span class="text-white font-semibold">Azerbaijan Technical
+          University</span> (GPA: 92/100) and Honor Graduate in AI-Driven Programming (GPA: 97/100). Specializing in
+        building scalable REST APIs, microservices, and real-time systems using <span
+          class="text-secondary font-semibold">C#</span>, <span class="text-primary font-semibold">ASP.NET Core</span>,
+        <span class="text-tertiary font-semibold">Entity Framework Core</span>, and Clean Architecture.
+      </p>
+
+      <div class="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-3 gap-6 my-12">
+        <div
+          class="cosmic-glass cosmic-glass-hover p-6 rounded-2xl flex flex-col items-center relative overflow-hidden group"
+          data-intro>
+          <div
+            class="absolute -top-12 -right-12 w-24 h-24 bg-primary/20 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform">
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span
+              class="font-display text-4xl sm:text-5xl font-extrabold text-primary drop-shadow-[0_0_15px_rgba(16,185,129,0.5)]"
+              data-count="97">97</span>
+            <span class="font-code text-lg text-primary/80">%</span>
+          </div>
+          <span class="font-code text-xs uppercase tracking-wider text-gray-400 mt-2">Code Academy High Honor GPA</span>
+        </div>
+        <div
+          class="cosmic-glass cosmic-glass-hover p-6 rounded-2xl flex flex-col items-center relative overflow-hidden group"
+          data-intro>
+          <div
+            class="absolute -top-12 -right-12 w-24 h-24 bg-secondary/20 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform">
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span
+              class="font-display text-4xl sm:text-5xl font-extrabold text-secondary drop-shadow-[0_0_15px_rgba(6,182,212,0.5)]"
+              data-count="20">20</span>
+            <span class="font-code text-lg text-secondary/80">+</span>
+          </div>
+          <span class="font-code text-xs uppercase tracking-wider text-gray-400 mt-2">Students Mentored in C# &amp;
+            .NET</span>
+        </div>
+        <div
+          class="cosmic-glass cosmic-glass-hover p-6 rounded-2xl flex flex-col items-center relative overflow-hidden group"
+          data-intro>
+          <div
+            class="absolute -top-12 -right-12 w-24 h-24 bg-tertiary/20 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform">
+          </div>
+          <div class="flex items-baseline gap-1">
+            <span
+              class="font-display text-4xl sm:text-5xl font-extrabold text-tertiary drop-shadow-[0_0_15px_rgba(56,189,248,0.5)]"
+              data-count="6">6</span>
+            <span class="font-code text-lg text-tertiary/80">+</span>
+          </div>
+          <span class="font-code text-xs uppercase tracking-wider text-gray-400 mt-2">Production-Grade Backend &amp;
+            SaaS Architectures</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-5" data-intro>
+        <a id="hero-contact"
+          class="group relative px-8 py-3.5 rounded-xl font-code text-sm font-bold text-white shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-3 overflow-hidden bg-gradient-to-r from-primary via-secondary to-[#1D4ED8]"
+          href="#contact">
+          <span
+            class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:rotate-45">near_me</span>
+          <span>Contact Me</span>
+        </a>
+        <a id="hero-cv"
+          class="cosmic-glass cosmic-glass-hover px-8 py-3.5 rounded-xl font-code text-sm font-semibold text-gray-200 hover:text-white transition-all flex items-center gap-3"
+          href="./ElvinAliyevCv.pdf" download="ElvinAliyevCv.pdf">
+          <span class="material-symbols-outlined text-secondary text-[20px]">download</span>
+          <span>Download CV (PDF)</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT & SKILLS -->
+    <section class="relative w-full py-20" id="spec">
+      <div class="flex items-center gap-3 mb-10" data-reveal>
+        <span
+          class="material-symbols-outlined text-primary text-[32px] drop-shadow-[0_0_10px_#10B981]">deployed_code</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white">Architectural Core // Spec</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-5 flex flex-col gap-6">
+          <div class="cosmic-glass p-8 rounded-3xl flex flex-col gap-5 relative overflow-hidden" data-reveal>
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <span class="font-code text-xs text-primary font-bold uppercase tracking-widest">[KERNEL PROFILE]</span>
+              <span class="font-code text-xs text-gray-400">SYS-REV-2026</span>
+            </div>
+            <p class="font-body text-sm sm:text-base text-gray-200 leading-relaxed">
+              Hands-on experience designing layered and Clean Architecture backends with ASP.NET Core, EF Core,
+              PostgreSQL, and SQL Server. Skilled in JWT Authentication, Role-Based Authorization, distributed caching,
+              real-time communication (SignalR, WebRTC), and external API/LLM integrations.
+            </p>
+            <p class="font-body text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Passionate about Domain-Driven Design (DDD), CQRS, and mentoring upcoming developers.
+            </p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span
+                class="px-3 py-1 rounded-lg font-code text-xs bg-primary/10 text-primary border border-primary/20">Clean
+                Architecture</span>
+              <span
+                class="px-3 py-1 rounded-lg font-code text-xs bg-secondary/10 text-secondary border border-secondary/20">DDD
+                &amp; CQRS</span>
+              <span
+                class="px-3 py-1 rounded-lg font-code text-xs bg-tertiary/10 text-tertiary border border-tertiary/20">Real-Time
+                Systems</span>
+            </div>
+          </div>
+
+          <div class="cosmic-glass p-6 rounded-2xl flex flex-col gap-4" data-reveal>
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse shadow-[0_0_8px_#06B6D4]"></span>
+                <span class="font-code text-xs text-white font-semibold tracking-wider">Active Coordinates</span>
+              </div>
+              <span class="font-code text-[11px] text-gray-400 text-right">BAKU, AZERBAIJAN // UTC+4</span>
+            </div>
+            <div class="p-4 rounded-xl bg-black/40 border border-white/5 flex items-center justify-between gap-3">
+              <div class="flex flex-col">
+                <span class="font-code text-[11px] text-gray-400 uppercase">Active Research Horizon</span>
+                <span class="font-code text-sm text-primary font-bold">Microservices, DDD &amp; Event-Driven
+                  Messaging</span>
+              </div>
+              <span class="material-symbols-outlined text-primary text-[24px]">memory</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          <div class="cosmic-glass p-8 rounded-3xl flex flex-col gap-4" data-reveal>
+            <div class="flex items-center gap-2 text-primary mb-1">
+              <span class="material-symbols-outlined text-[22px]">dns</span>
+              <h3 class="font-display text-lg font-bold text-white">Core Back-end &amp; Architecture</h3>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">C#</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">.NET
+                8 / .NET 10</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">ASP.NET
+                Core Web API &amp; MVC</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">Clean
+                Architecture</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">CQRS
+                &amp; MediatR</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">DDD
+                (Aggregate Root, Value Object, Domain Events)</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">OOP</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">SOLID</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">Repository
+                Pattern</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">FluentValidation</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-primary transition-colors">JWT
+                &amp; ASP.NET Core Identity</span>
+            </div>
+          </div>
+
+          <div class="cosmic-glass p-8 rounded-3xl flex flex-col gap-4" data-reveal>
+            <div class="flex items-center gap-2 text-secondary mb-1">
+              <span class="material-symbols-outlined text-[22px]">database</span>
+              <h3 class="font-display text-lg font-bold text-white">Databases, Caching &amp; Messaging</h3>
+            </div>
+            <div class="flex flex-wrap gap-2.5">
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-secondary transition-colors">PostgreSQL</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-secondary transition-colors">MS
+                SQL Server</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-secondary transition-colors">Entity
+                Framework Core</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-secondary transition-colors">EF
+                Core Migrations</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-secondary transition-colors">Redis
+                Caching</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-secondary transition-colors">RabbitMQ</span>
+              <span
+                class="px-4 py-2 rounded-xl font-code text-xs font-semibold text-white cosmic-glass hover:text-secondary transition-colors">ElasticSearch</span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="cosmic-glass p-6 rounded-2xl flex flex-col gap-3" data-reveal>
+              <div class="flex items-center gap-2 text-tertiary">
+                <span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+                <h4 class="font-code text-xs font-bold text-white uppercase tracking-wider">Real-Time &amp; DevOps</h4>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-1">
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">SignalR</span>
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">WebRTC (1-to-1
+                  Peer)</span>
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">Docker</span>
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">Docker Compose</span>
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">Linux VPS</span>
+              </div>
+            </div>
+            <div class="cosmic-glass p-6 rounded-2xl flex flex-col gap-3" data-reveal>
+              <div class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined text-[20px]">schema</span>
+                <h4 class="font-code text-xs font-bold text-white uppercase tracking-wider">Tooling &amp; Frontend</h4>
+              </div>
+              <div class="flex flex-wrap gap-2 mt-1">
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">Git &amp; GitHub</span>
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">Swagger / OpenAPI</span>
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">JavaScript</span>
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">React</span>
+                <span class="px-3 py-1 rounded-lg font-code text-xs text-gray-300 cosmic-glass">Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BLACK HOLE ORBITAL SHOWCASE -->
+    <section class="relative w-full pt-24 flex flex-col items-center" id="orbital-showcase">
+      <div class="text-center max-w-2xl mb-6" data-reveal>
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full cosmic-glass shadow-[0_0_20px_rgba(6,182,212,0.2)] mb-4">
+          <span class="material-symbols-outlined text-secondary text-[16px]">chevron_forward</span>
+          <span class="font-code text-xs text-secondary uppercase tracking-widest font-semibold">Radial System
+            Horizon</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white">The Black Hole Orbital Showcase</h2>
+        <p class="font-body text-sm sm:text-base text-gray-400 mt-4 leading-relaxed">
+          Six production-grade .NET backend systems locked in a vertical elliptical orbit around a gravitational
+          singularity. Hover to pause, drag or scroll to spin.
+        </p>
+      </div>
+
+      <div class="orbit-tools">
+        <button id="orbit-pause" class="cosmic-glass" type="button" aria-pressed="false">Pause orbit</button>
+        <button id="orbit-view" class="cosmic-glass" type="button" aria-pressed="false">List view</button>
+      </div>
+      <div id="orbit-pin" class="relative w-full">
+        <div id="orbit-stage" data-orbit-vertical="true" role="region" aria-label="Project carousel. Use arrow keys to browse." tabindex="0">
+          <svg id="orbit-path" aria-hidden="true">
+            <defs>
+              <linearGradient id="orbit-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#10B981" stop-opacity=".45" />
+                <stop offset="50%" stop-color="#06B6D4" stop-opacity=".25" />
+                <stop offset="100%" stop-color="#1D4ED8" stop-opacity=".45" />
+              </linearGradient>
+            </defs>
+            <ellipse class="glow" fill="none" stroke="url(#orbit-grad)" stroke-width="1.2" />
+            <ellipse class="dash" fill="none" stroke="#10B981" stroke-opacity=".35" stroke-width="1" />
+          </svg>
+
+          <div id="blackhole-core" class="contents">
+            <canvas id="blackhole-canvas" aria-label="Animated black hole with accretion disk" role="img"></canvas>
+          </div>
+
+          <!-- Project cards are rendered here from PROJECTS data -->
+          <div id="orbit-cards" class="contents"></div>
+
+          <!-- Orbit HUD -->
+          <div id="orbit-hud"
+            class="absolute bottom-6 left-1/2 -translate-x-1/2 z-40 flex flex-col items-center gap-3 w-[min(92%,28rem)]">
+            <div class="flex items-center gap-3 w-full justify-between cosmic-glass rounded-2xl px-3 py-2">
+              <button id="orbit-prev" type="button" aria-label="Previous project"
+                class="w-9 h-9 rounded-xl flex items-center justify-center text-gray-300 hover:text-primary hover:bg-white/5 transition-colors">
+                <span class="material-symbols-outlined text-[20px]">keyboard_arrow_up</span>
+              </button>
+              <div class="flex flex-col items-center min-w-0">
+                <span id="orbit-index" class="font-code text-[10px] text-primary tracking-[0.25em]">NODE 01 / 06</span>
+                <span id="orbit-name"
+                  class="font-display text-sm font-bold text-white truncate max-w-[16rem]">HPS</span>
+              </div>
+              <button id="orbit-next" type="button" aria-label="Next project"
+                class="w-9 h-9 rounded-xl flex items-center justify-center text-gray-300 hover:text-primary hover:bg-white/5 transition-colors">
+                <span class="material-symbols-outlined text-[20px]">keyboard_arrow_down</span>
+              </button>
+            </div>
+            <div class="flex items-center gap-3">
+              <div id="orbit-dots" class="flex items-center gap-1.5"></div>
+              <span class="font-code text-[10px] text-gray-500 tracking-widest hidden sm:inline">DRAG · SCROLL · HOVER
+                TO PAUSE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CV / CAREER -->
+    <section class="relative w-full py-20" id="cv-telemetry">
+      <div class="cosmic-glass p-8 sm:p-12 lg:p-16 rounded-3xl relative overflow-hidden" data-reveal>
+        <div class="absolute -top-32 -left-32 w-80 h-80 bg-primary/20 rounded-full blur-[100px] pointer-events-none">
+        </div>
+        <div
+          class="absolute -bottom-32 -right-32 w-80 h-80 bg-secondary/20 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="relative z-10 flex flex-col lg:flex-row items-start justify-between gap-12">
+          <div class="flex flex-col gap-6 flex-1">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 w-fit">
+              <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+              <span class="font-code text-xs text-primary uppercase tracking-wider font-semibold">Trajectory Record //
+                2023 – 2027</span>
+            </div>
+            <h3 class="font-display text-3xl sm:text-4xl font-extrabold text-white">Career, Mentorship &amp; Education
+            </h3>
+
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-10 mt-2">
+              <!-- Experience -->
+              <div class="flex flex-col gap-6">
+                <span class="font-code text-[11px] text-gray-400 uppercase tracking-[0.25em]">// Experience</span>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center shrink-0 border border-primary/30">
+                    <span class="material-symbols-outlined text-primary text-[20px]">school</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-display text-base font-bold text-white">Programming Instructor &amp; Technical
+                      Mentor</span>
+                    <span class="font-code text-xs text-cyan-400 mt-0.5">@ Freelance · Sep 2025 – Present</span>
+                    <p class="font-body text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed">
+                      Mentored 20+ students in C#, OOP, SQL, Data Structures &amp; Algorithms, Git, REST APIs, and
+                      ASP.NET MVC. Guided 10+ students to successfully build and ship complete junior-level backend
+                      projects through structured code reviews.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center shrink-0 border border-secondary/30">
+                    <span class="material-symbols-outlined text-secondary text-[20px]">volunteer_activism</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-display text-base font-bold text-white">Programming Mentor &amp; Active
+                      Volunteer</span>
+                    <span class="font-code text-xs text-emerald-400 mt-0.5">@ STEAM Azerbaijan Festival (SAF 2024) ·
+                      "Bir Könüllü" / AzTU (2024)</span>
+                    <p class="font-body text-xs sm:text-sm text-gray-300 mt-2 leading-relaxed">
+                      Programming mentor at the STEAM Azerbaijan Festival 2024 and active volunteer with the "Bir
+                      Könüllü" initiative at Azerbaijan Technical University.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div class="flex flex-col gap-6">
+                <span class="font-code text-[11px] text-gray-400 uppercase tracking-[0.25em]">// Education &amp;
+                  Certifications</span>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center shrink-0 border border-tertiary/30">
+                    <span class="material-symbols-outlined text-tertiary text-[20px]">account_balance</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-display text-base font-bold text-white">B.S. in Computer Engineering</span>
+                    <span class="font-code text-xs text-blue-300 mt-0.5">@ Azerbaijan Technical University · 2023 – Jun
+                      2027</span>
+                    <p class="font-body text-xs sm:text-sm text-gray-300 mt-1 leading-relaxed">Senior Year · GPA: <span
+                        class="text-white font-semibold">92/100</span></p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center shrink-0 border border-primary/30">
+                    <span class="material-symbols-outlined text-primary text-[20px]">workspace_premium</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-display text-base font-bold text-white">AI-Driven Software Programming</span>
+                    <span class="font-code text-xs text-emerald-400 mt-0.5">@ Code Academy</span>
+                    <p class="font-body text-xs sm:text-sm text-gray-300 mt-1 leading-relaxed">High Honor Graduate ·
+                      GPA: <span class="text-white font-semibold">97/100</span> · Certificate ID: <span
+                        class="font-code text-primary">5PA2A03</span></p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-xl cosmic-glass flex items-center justify-center shrink-0 border border-secondary/30">
+                    <span class="material-symbols-outlined text-secondary text-[20px]">military_tech</span>
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-display text-base font-bold text-white">Software Engineering</span>
+                    <span class="font-code text-xs text-cyan-400 mt-0.5">@ PeerStack Academy · Feb 2026 – Jun
+                      2026</span>
+                    <p class="font-body text-xs sm:text-sm text-gray-300 mt-1 leading-relaxed">Awarded <span
+                        class="text-white font-semibold">100% Full Scholarship</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download card -->
+          <div
+            class="w-full lg:w-80 shrink-0 cosmic-glass cosmic-glass-hover p-8 rounded-3xl flex flex-col items-center text-center shadow-[0_15px_40px_rgba(0,0,0,0.8)] border border-white/20 lg:sticky lg:top-28">
+            <div
+              class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-primary/30 via-secondary/20 to-tertiary/20 flex items-center justify-center mb-5 shadow-[0_0_25px_rgba(16,185,129,0.3)]">
+              <span class="material-symbols-outlined text-primary text-[36px]">description</span>
+            </div>
+            <h4 class="font-display text-xl font-bold text-white">Complete Dossier</h4>
+            <p class="font-body text-xs text-gray-300 mt-2 mb-6">Full CV with experience, education, certifications and
+              project portfolio.</p>
+            <div class="flex items-center gap-2 mb-6">
+              <span
+                class="px-2.5 py-0.5 rounded font-code text-[11px] bg-primary/20 text-primary border border-primary/30">v2026</span>
+              <span class="px-2.5 py-0.5 rounded font-code text-[11px] bg-white/10 text-gray-300">73 KB</span>
+              <span
+                class="px-2.5 py-0.5 rounded font-code text-[11px] bg-secondary/20 text-secondary border border-secondary/30">PDF</span>
+            </div>
+            <a id="cv-download"
+              class="w-full py-3 rounded-xl font-code text-xs font-bold text-white bg-gradient-to-r from-primary via-secondary to-[#1D4ED8] shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2"
+              href="./ElvinAliyevCv.pdf" download="ElvinAliyevCv.pdf">
+              <span class="material-symbols-outlined text-[18px]">download</span>
+              <span>Download CV (PDF)</span>
+            </a>
+            <a id="cv-view" class="mt-3 font-code text-[11px] text-gray-400 hover:text-secondary transition-colors"
+              href="./ElvinAliyevCv.pdf" target="_blank" rel="noopener">Open in browser ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FOOTER & CONTACT -->
+    <footer class="relative w-full pt-16 pb-20 flex flex-col items-center" id="contact">
+      <div
+        class="w-full max-w-4xl cosmic-glass p-8 sm:p-10 rounded-3xl flex flex-col gap-8 shadow-[0_20px_50px_rgba(0,0,0,0.7)]"
+        data-reveal>
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center justify-center md:justify-start gap-2">
+              <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              <span class="font-code text-xs text-primary font-bold tracking-widest">READY FOR DISPATCH</span>
+            </div>
+            <h4 class="font-display text-2xl sm:text-3xl font-extrabold text-white">Let's Build Scalable Backends</h4>
+            <p class="font-body text-xs sm:text-sm text-gray-400">Open to .NET backend engineering roles, collaborations
+              &amp; mentoring engagements.</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a id="social-github" aria-label="GitHub Profile"
+              class="w-12 h-12 rounded-2xl cosmic-glass flex items-center justify-center text-gray-300 hover:text-primary transition-all hover:scale-110"
+              href="https://github.com/Elvin-Aliyev201" rel="noopener noreferrer" target="_blank">
+              <svg class="w-5 h-5 fill-current">
+                <use href="#i-github" />
+              </svg>
+            </a>
+            <a id="social-linkedin" aria-label="LinkedIn Profile"
+              class="w-12 h-12 rounded-2xl cosmic-glass flex items-center justify-center text-gray-300 hover:text-secondary transition-all hover:scale-110"
+              href="https://www.linkedin.com/in/elvin-aliyev-dev" rel="noopener noreferrer" target="_blank">
+              <svg class="w-5 h-5 fill-current">
+                <use href="#i-linkedin" />
+              </svg>
+            </a>
+            <a id="social-email" aria-label="Email"
+              class="w-12 h-12 rounded-2xl cosmic-glass flex items-center justify-center text-gray-300 hover:text-tertiary transition-all hover:scale-110"
+              href="mailto:elvinaliyev483@gmail.com">
+              <span class="material-symbols-outlined text-[22px]">alternate_email</span>
+            </a>
+            <a id="social-phone" aria-label="Phone"
+              class="w-12 h-12 rounded-2xl cosmic-glass flex items-center justify-center text-gray-300 hover:text-primary transition-all hover:scale-110"
+              href="tel:+994558923281">
+              <span class="material-symbols-outlined text-[22px]">call</span>
+            </a>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-white/10">
+          <a id="contact-email" href="mailto:elvinaliyev483@gmail.com"
+            class="group flex items-center gap-3 px-4 py-3 rounded-xl bg-black/30 border border-white/5 hover:border-primary/40 transition-colors min-w-0">
+            <span class="material-symbols-outlined text-primary text-[20px]">mail</span>
+            <span
+              class="font-code text-xs text-gray-300 group-hover:text-white truncate">elvinaliyev483@gmail.com</span>
+          </a>
+          <a id="contact-phone" href="tel:+994558923281"
+            class="group flex items-center gap-3 px-4 py-3 rounded-xl bg-black/30 border border-white/5 hover:border-secondary/40 transition-colors">
+            <span class="material-symbols-outlined text-secondary text-[20px]">smartphone</span>
+            <span class="font-code text-xs text-gray-300 group-hover:text-white">+994 55 892 32 81</span>
+          </a>
+          <div class="flex items-center gap-3 px-4 py-3 rounded-xl bg-black/30 border border-white/5">
+            <span class="material-symbols-outlined text-tertiary text-[20px]">location_on</span>
+            <span class="font-code text-xs text-gray-300">Baku, Azerbaijan</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center">
+        <p class="font-code text-xs text-gray-500 tracking-wider">© 2026 Elvin Aliyev · ELVIN.DEV — Engineered with C#,
+          curiosity &amp; a little gravity.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ============================================================
+     PROJECT DATA + CARD RENDERING
+============================================================= -->
+  <script>
+    const PROJECTS = [
+      {
+        tag: 'NODE // 01 [ACTIVE R&amp;D]', status: 'R&amp;D', flagship: true, title: 'HPS', sub: 'Configurable Headless E-Commerce SaaS',
+        desc: 'A multi-tenant, configurable Headless E-Commerce SaaS platform powered by microservices architecture, featuring AI-driven prompt-to-store configuration, asynchronous event messaging, and distributed caching.',
+        badges: ['ASP.NET Core', 'Microservices', 'RabbitMQ', 'Redis', 'ElasticSearch', 'Docker'], accent: ['#10B981', '16,185,129']
+      },
+      {
+        tag: 'NODE // 02 [PRODUCTION]', status: 'LIVE', title: 'CodeRoom', sub: 'Real-Time Collaborative Coding & Mentoring Platform',
+        desc: 'Real-time pair-programming and mentoring platform integrating Monaco Editor, SignalR WebSockets for live code synchronization, and 1-to-1 WebRTC video/audio communication rooms.',
+        badges: ['ASP.NET Core 8', 'SignalR', 'WebRTC', 'SQL Server', 'EF Core', 'Identity'], accent: ['#06B6D4', '6,182,212']
+      },
+      {
+        tag: 'NODE // 03 [CORE API]', status: 'STABLE', title: 'Bakery CRM', sub: 'Clean Architecture & CQRS Enterprise Backend',
+        desc: 'Modular CRM backend engineered with Clean Architecture and the CQRS pattern via MediatR, featuring strict JWT Authentication, Role-Based Authorization, and PostgreSQL persistence.',
+        badges: ['ASP.NET Core', 'Clean Architecture', 'CQRS / MediatR', 'PostgreSQL', 'JWT'], accent: ['#38BDF8', '56,189,248']
+      },
+      {
+        tag: 'NODE // 04 [ENTERPRISE]', status: 'STABLE', title: 'GlassFactory', sub: '5-Layer Clean Architecture ERP & CRM System',
+        desc: 'Industrial ERP/CRM backend built on a 5-layer Clean Architecture with Domain Events, Poka-Yoke quality constraints, automated audit logging, and granular role-based access control.',
+        badges: ['C#', 'ASP.NET Core', 'DDD / Domain Events', 'EF Core', 'RBAC'], accent: ['#10B981', '16,185,129']
+      },
+      {
+        tag: 'NODE // 05 [MICRO-API]', status: 'DOCKER', title: 'Weather API', sub: 'Containerized Clean Architecture Service',
+        desc: 'Multi-layered Clean Architecture weather telemetry backend integrating OpenWeatherMap REST APIs, distributed response caching, FluentValidation pipelines, and Docker Compose orchestration.',
+        badges: ['ASP.NET Core', 'PostgreSQL', 'Docker Compose', 'FluentValidation', 'Caching'], accent: ['#06B6D4', '6,182,212']
+      },
+      {
+        tag: 'NODE // 06 [AI ENGINE]', status: 'AI', title: 'LookFuture AI', sub: 'AI-Powered Business Idea Validator API',
+        desc: 'Intelligent Web API that evaluates and validates startup concepts using OpenRouter LLM integrations, secured with JWT authentication and backed by Supabase PostgreSQL.',
+        badges: ['ASP.NET Core 8', 'OpenRouter AI', 'Supabase PostgreSQL', 'JWT'], accent: ['#38BDF8', '56,189,248']
+      }
+    ];
+    const GITHUB_URL = 'https://github.com/Elvin-Aliyev201';
+
+    (function renderCards() {
+      const host = document.getElementById('orbit-cards');
+      const esc = s => s.replace(/&(?!amp;)/g, '&amp;');
+      host.innerHTML = PROJECTS.map((p, i) => `
+    <article class="orbit-card cosmic-glass" data-orbit-card="${i + 1}" id="project-${i + 1}"
+      style="--accent:${p.accent[0]};--accent-rgb:${p.accent[1]}" aria-label="${esc(p.title)} — ${esc(p.sub)}">
+      <div class="oc-glow"></div>
+      <header class="oc-head">
+        <span class="oc-tag">${p.tag}</span>
+        <span class="oc-status"><i></i>${p.status}</span>
+      </header>
+      <h3 class="oc-title">${esc(p.title)}${p.flagship ? '<span class="oc-flag">★ FLAGSHIP</span>' : ''}
+        <span class="oc-sub">${esc(p.sub)}</span></h3>
+      <p class="oc-desc">${esc(p.desc)}</p>
+      <ul class="oc-badges">${p.badges.map(b => `<li>${esc(b)}</li>`).join('')}</ul>
+      <footer class="oc-foot">
+        <a class="oc-link" id="project-${i + 1}-github" href="${GITHUB_URL}" target="_blank" rel="noopener noreferrer" draggable="false">
+          <svg><use href="#i-github"/></svg><span>GitHub Profile ↗</span>
+        </a>
+        <span class="oc-repo">Elvin-Aliyev201</span>
+      </footer>
+    </article>`).join('');
+
+      const dots = document.getElementById('orbit-dots');
+      dots.innerHTML = PROJECTS.map((p, i) =>
+        `<button type="button" class="orbit-dot" id="orbit-dot-${i + 1}" data-dot="${i}" aria-label="Show ${esc(p.title)}"></button>`).join('');
+    })();
+  </script>
+
+  <!-- ============================================================
+     SHARED: Lenis smooth scroll + GSAP / ScrollTrigger
+============================================================= -->
+  <script>
+    window.APP = { mouse: { x: 0, y: 0 }, reduced: matchMedia('(prefers-reduced-motion: reduce)').matches, lenis: null };
+
+    (function initScroll() {
+      const hasGsap = !!(window.gsap && window.ScrollTrigger);
+      if (hasGsap) gsap.registerPlugin(ScrollTrigger);
+
+      if (window.Lenis && !APP.reduced) {
+        const lenis = new Lenis({ autoRaf: true, lerp: 0.085, smoothWheel: true, wheelMultiplier: 1 });
+        APP.lenis = lenis;
+        if (hasGsap) lenis.on('scroll', ScrollTrigger.update);
+      }
+
+      // Anchor links -> smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href');
+          const target = id === '#' ? document.body : document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          if (APP.lenis) APP.lenis.scrollTo(target, { offset: -96, immediate: true });
+          else target.scrollIntoView({ behavior: APP.reduced ? 'auto' : 'smooth' });
+          history.replaceState(null, '', id);
+          document.getElementById('mobile-menu').hidden = true;
+          document.getElementById('menu-toggle').setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      window.addEventListener('mousemove', e => {
+        APP.mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+        APP.mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+      }, { passive: true });
+
+      if (!hasGsap || APP.reduced) return;
+
+      // Intro timeline
+      gsap.fromTo('[data-intro]', { y: 20 }, { y: 0, duration: .8, ease: 'power3.out', stagger: .04, clearProps: 'transform' });
+
+      // Stat counters
+      document.querySelectorAll('[data-count]').forEach(el => {
+        const end = +el.dataset.count, o = { v: 0 };
+        gsap.to(o, { v: end, duration: 2.2, delay: 0.6, ease: 'power2.out', onUpdate: () => { el.textContent = Math.round(o.v); } });
+      });
+
+      // Scroll reveals
+      gsap.utils.toArray('[data-reveal]').forEach(el => {
+        gsap.fromTo(el, { y: 24 }, { y: 0, duration: .8, ease: 'power3.out', clearProps: 'transform', scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+      });
+
+      window.addEventListener('load', () => ScrollTrigger.refresh());
+    })();
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.hidden = !mobileMenu.hidden;
+      menuToggle.setAttribute('aria-expanded', String(!mobileMenu.hidden));
+    });
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape' && !mobileMenu.hidden) { mobileMenu.hidden = true; menuToggle.setAttribute('aria-expanded','false'); menuToggle.focus(); }
+    });
+
+    // Active nav link
+    (function navSpy() {
+      const links = document.querySelectorAll('[data-nav]');
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(en => {
+          if (en.isIntersecting) links.forEach(l => l.classList.toggle('active', l.dataset.nav === en.target.id));
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      ['hero', 'spec', 'orbital-showcase', 'cv-telemetry'].forEach(id => { const s = document.getElementById(id); if (s) io.observe(s); });
+    })();
+
+    // Premultiplied additive blending helper (keeps canvases transparent where dark)
+    window.ADD_BLEND = window.THREE ? {
+      blending: THREE.CustomBlending, blendEquation: THREE.AddEquation,
+      blendSrc: THREE.OneFactor, blendDst: THREE.OneFactor
+    } : {};
+  </script>
+
+  <!-- ============================================================
+     PART 1: DEEP-SPACE UNIVERSE (16k soft shader orbs)
+============================================================= -->
+  <script>
+    (function cosmos() {
+      if (!window.THREE) return;
+      const container = document.getElementById('cosmos');
+      const PR = Math.min(window.devicePixelRatio || 1, 2);
+      let renderer;
+      try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: false, powerPreference: 'high-performance' }); } catch (_) { return; }
+      renderer.setPixelRatio(PR);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setClearColor(0x010306, 0);
+      container.appendChild(renderer.domElement);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 5000);
+      camera.position.set(0, 0, 600);
+
+      const mobile = window.innerWidth < 768;
+      const N_DEEP = mobile ? 8500 : 9500;
+      const N_GAL = mobile ? 5000 : 5000;
+      const N_DUST = mobile ? 1800 : 1800;
+      const N = N_DEEP + N_GAL + N_DUST;
+
+      const pos = new Float32Array(N * 3), col = new Float32Array(N * 3), scl = new Float32Array(N), rnd = new Float32Array(N * 3);
+      const C = {
+        emerald: new THREE.Color('#10B981'), forest: new THREE.Color('#063B29'),
+        cyan: new THREE.Color('#06B6D4'), blue: new THREE.Color('#1D4ED8')
+      };
+      const tmp = new THREE.Color(), v = new THREE.Vector3();
+      const gauss = () => (Math.random() + Math.random() + Math.random() + Math.random() - 2) / 2;
+      const pick = (arr) => arr[(Math.random() * arr.length) | 0];
+      const galEuler = new THREE.Euler(1.12, 0.2, 0.42);
+      const galOffset = new THREE.Vector3(180, -60, -380);
+
+      for (let i = 0; i < N; i++) {
+        const i3 = i * 3;
+        let s, intensity = 1;
+        if (i < N_DEEP) {
+          // Deep spherical shell
+          const r = 350 + Math.pow(Math.random(), 0.65) * 1500;
+          const th = Math.random() * Math.PI * 2, ph = Math.acos(Math.random() * 2 - 1);
+          v.set(r * Math.sin(ph) * Math.cos(th), r * Math.sin(ph) * Math.sin(th), r * Math.cos(ph));
+          tmp.copy(pick([C.emerald, C.cyan, C.cyan, C.blue, C.blue, C.emerald])).lerp(pick([C.cyan, C.blue]), Math.random() * 0.5);
+          s = 0.35 + Math.pow(Math.random(), 4) * 2.2;
+        } else if (i < N_DEEP + N_GAL) {
+          // Spiral galaxy band
+          const arm = (Math.random() * 3) | 0;
+          const r = 40 + Math.pow(Math.random(), 1.6) * 950;
+          const a = arm * (Math.PI * 2 / 3) + r * 0.0065 + gauss() * 0.35;
+          const spread = 18 + r * 0.12;
+          v.set(Math.cos(a) * r + gauss() * spread, gauss() * (26 + r * 0.03), Math.sin(a) * r + gauss() * spread);
+          v.applyEuler(galEuler).add(galOffset);
+          const t = r / 990;
+          if (t < 0.25) tmp.copy(C.cyan).lerp(C.emerald, t / 0.25);
+          else if (t < 0.6) tmp.copy(C.emerald).lerp(C.blue, (t - 0.25) / 0.35);
+          else tmp.copy(C.blue).lerp(C.forest, (t - 0.6) / 0.4 * 0.6);
+          s = 0.3 + Math.pow(Math.random(), 3) * 1.6;
+          intensity = 0.85;
+        } else {
+          // Near volumetric dust (large, soft, faint)
+          v.set((Math.random() - 0.5) * 1500, (Math.random() - 0.5) * 1100, -250 + Math.random() * 560);
+          tmp.copy(pick([C.forest, C.forest, C.emerald, C.blue, C.cyan]));
+          s = 1.6 + Math.random() * 3.4;
+          intensity = 0.22;
+        }
+        pos[i3] = v.x; pos[i3 + 1] = v.y; pos[i3 + 2] = v.z;
+        col[i3] = tmp.r * intensity; col[i3 + 1] = tmp.g * intensity; col[i3 + 2] = tmp.b * intensity;
+        scl[i] = s;
+        rnd[i3] = Math.random(); rnd[i3 + 1] = Math.random(); rnd[i3 + 2] = Math.random();
+      }
+
+      const geo = new THREE.BufferGeometry();
+      geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+      geo.setAttribute('aColor', new THREE.BufferAttribute(col, 3));
+      geo.setAttribute('aScale', new THREE.BufferAttribute(scl, 1));
+      geo.setAttribute('aRandom', new THREE.BufferAttribute(rnd, 3));
+
+      const uniforms = {
+        uTime: { value: 0 }, uPixelRatio: { value: PR }, uSize: { value: mobile ? 7.5 : 6.5 },
+        uMouse: { value: new THREE.Vector2(9, 9) }, uAspect: { value: window.innerWidth / window.innerHeight },
+        uScroll: { value: 0 }
+      };
+
+      const mat = new THREE.ShaderMaterial(Object.assign({
+        uniforms, transparent: true, depthWrite: false, depthTest: false,
+        vertexShader: `
+      uniform float uTime, uPixelRatio, uSize, uAspect, uScroll;
+      uniform vec2 uMouse;
+      attribute float aScale;
+      attribute vec3 aColor;
+      attribute vec3 aRandom;
+      varying vec3 vColor;
+      varying float vAlpha;
+      void main() {
+        vec3 p = position;
+        // Differential orbital swirl
+        float r = length(p.xz);
+        float sp = (0.010 + 0.028 * aRandom.x) * (1.0 + 220.0 / (r + 220.0));
+        float ang = uTime * sp + uScroll * 0.9 * (0.4 + aRandom.z);
+        float cs = cos(ang), sn = sin(ang);
+        p.xz = mat2(cs, -sn, sn, cs) * p.xz;
+        // Organic wave drift
+        p.y += sin(uTime * 0.35 + p.x * 0.0035 + aRandom.y * 6.2831) * 16.0 * aRandom.z;
+        p.x += cos(uTime * 0.28 + p.z * 0.0030 + aRandom.x * 6.2831) * 12.0 * aRandom.y;
+        p.z += sin(uTime * 0.22 + p.y * 0.0040 + aRandom.z * 6.2831) * 9.0 * aRandom.x;
+
+        vec4 mv = modelViewMatrix * vec4(p, 1.0);
+        // Mouse repulsion (screen-space, depth-compensated)
+        vec4 clip = projectionMatrix * mv;
+        vec2 ndc = clip.xy / clip.w;
+        vec2 d = ndc - uMouse; d.x *= uAspect;
+        float dist = length(d);
+        float f = (1.0 - smoothstep(0.0, 0.42, dist));
+        vec2 dir = dist > 0.0001 ? d / dist : vec2(0.0);
+        mv.xy += dir * f * (-mv.z) * 0.075 * (0.35 + aRandom.y);
+
+        gl_Position = projectionMatrix * mv;
+        float size = uSize * aScale * uPixelRatio * (320.0 / max(-mv.z, 1.0));
+        gl_PointSize = clamp(size, 0.0, 70.0 * uPixelRatio);
+
+        float tw = 0.62 + 0.38 * sin(uTime * (0.7 + aRandom.x * 2.6) + aRandom.y * 40.0);
+        float depthFade = clamp(1.0 - (-mv.z - 1300.0) / 1500.0, 0.2, 1.0);
+        vColor = aColor;
+        vAlpha = tw * depthFade * (1.0 + f * 0.9);
+      }`,
+        fragmentShader: `
+      varying vec3 vColor;
+      varying float vAlpha;
+      void main() {
+        vec2 c = gl_PointCoord - 0.5;
+        float d = length(c);
+        if (d > 0.5) discard;
+        float core = exp(-d * d * 60.0);
+        float glow = exp(-d * d * 11.0) * 0.5;
+        float a = (core + glow) * (1.0 - smoothstep(0.28, 0.5, d)) * vAlpha;
+        vec3 col = mix(vColor, vec3(1.0), core * 0.28) * a;
+        col = min(col, vec3(1.0));
+        gl_FragColor = vec4(col, max(max(col.r, col.g), col.b));
+      }`
+      }, ADD_BLEND));
+
+      const points = new THREE.Points(geo, mat);
+      points.frustumCulled = false;
+      scene.add(points);
+
+      const mouse = new THREE.Vector2(9, 9);
+      let hasMouse = false;
+      window.addEventListener('mousemove', () => { hasMouse = true; }, { once: true });
+
+      function resize() {
+        const w = window.innerWidth, h = window.innerHeight;
+        camera.aspect = w / h; camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+        uniforms.uAspect.value = w / h;
+      }
+      window.addEventListener('resize', resize);
+
+      const clock = new THREE.Clock();
+      let scrollSmooth = 0;
+      const speed = APP.reduced ? 0 : 1;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        if (document.hidden) return;
+        const t = clock.getElapsedTime() * speed;
+        uniforms.uTime.value = t;
+
+        if (hasMouse && !APP.reduced) mouse.lerp(APP.mouse, 0.08);
+        uniforms.uMouse.value.copy(mouse);
+
+        const max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+        const prog = APP.reduced ? 0 : window.scrollY / max;
+        scrollSmooth += (prog - scrollSmooth) * 0.06;
+        uniforms.uScroll.value = scrollSmooth;
+
+        points.rotation.y = scrollSmooth * 0.9;
+        points.rotation.x = scrollSmooth * 0.35;
+
+        // Camera parallax + scroll fly-through
+        const tx = APP.reduced ? 0 : APP.mouse.x * 45, ty = APP.reduced ? 0 : APP.mouse.y * 30;
+        camera.position.x += (tx - camera.position.x) * 0.03;
+        camera.position.y += (ty - scrollSmooth * 120 - camera.position.y) * 0.03;
+        camera.position.z = 600 - scrollSmooth * 220;
+        camera.lookAt(0, -scrollSmooth * 80, 0);
+
+        renderer.render(scene, camera);
+      }
+      animate();
+    })();
+  </script>
+
+  <!-- ============================================================
+     PART 2a: WEBGL BLACK HOLE (event horizon, photon ring,
+     Keplerian accretion disk, gravitationally lensed halo)
+============================================================= -->
+  <script>
+    window.BH = { boost: 0 };
+    (function blackHole() {
+      if (!window.THREE) return;
+      const canvas = document.getElementById('blackhole-canvas');
+      const stage = document.getElementById('orbit-stage');
+      const PR = Math.min(window.devicePixelRatio || 1, 2);
+      let renderer;
+      try { renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, premultipliedAlpha: true }); } catch (_) { canvas.hidden = true; return; }
+      renderer.setPixelRatio(PR);
+      renderer.setClearColor(0x000000, 0);
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+      camera.position.set(0, 0, 15);
+
+      const root = new THREE.Group();
+      scene.add(root);
+      const diskTilt = new THREE.Group();
+      diskTilt.rotation.set(0.2, 0, -0.14);
+      root.add(diskTilt);
+
+      const mobile = window.innerWidth < 768;
+      const shared = { uTime: { value: 0 }, uPixelRatio: { value: PR }, uSize: { value: 46 }, uBoost: { value: 0 } };
+
+      // --- Photon ring + halo glow (camera-facing plane) ---
+      const glowMat = new THREE.ShaderMaterial(Object.assign({
+        uniforms: shared, transparent: true, depthWrite: false, depthTest: false,
+        vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
+        fragmentShader: `
+      uniform float uTime, uBoost;
+      varying vec2 vUv;
+      void main() {
+        vec2 p = (vUv - 0.5) * 16.0;
+        float r = length(p);
+        float ang = atan(p.y, p.x);
+        vec3 cy = vec3(0.024, 0.714, 0.831), em = vec3(0.063, 0.725, 0.506), bl = vec3(0.114, 0.306, 0.847);
+        float swirl = 0.5 + 0.5 * sin(ang * 3.0 - uTime * 1.3 + r * 2.2);
+        float ring  = exp(-pow((r - 1.055) * 13.0, 2.0));
+        float ring2 = exp(-pow((r - 1.2) * 5.0, 2.0)) * 0.45;
+        float e = max(r - 1.0, 0.0);
+        float halo  = exp(-e * 1.25) * 0.30;
+        float outer = exp(-e * 0.42) * 0.07;
+        vec3 col = mix(em, cy, swirl);
+        col = mix(col, bl, smoothstep(1.4, 5.5, r));
+        float dop = 1.0 + 0.35 * cos(ang);
+        vec3 ringCol = mix(vec3(0.82, 1.0, 0.96), cy, 0.3);
+        vec3 c = ringCol * ring * 1.5 + col * (ring2 + halo * (0.75 + 0.5 * swirl) + outer);
+        c *= dop * (1.0 + uBoost * 0.9);
+        c *= (1.0 - smoothstep(5.5, 8.0, r)) * smoothstep(1.0, 1.025, r);
+        c = min(c, vec3(1.0));
+        gl_FragColor = vec4(c, max(max(c.r, c.g), c.b));
+      }`
+      }, ADD_BLEND));
+      const glow = new THREE.Mesh(new THREE.PlaneGeometry(16, 16), glowMat);
+      glow.renderOrder = 0;
+      root.add(glow);
+
+      // --- Event horizon (pure void) ---
+      const horizon = new THREE.Mesh(new THREE.SphereGeometry(1, 64, 64), new THREE.MeshBasicMaterial({ color: 0x000000 }));
+      horizon.renderOrder = 1;
+      root.add(horizon);
+
+      // --- Accretion disk & lensed halo particles ---
+      const gauss = () => (Math.random() + Math.random() + Math.random() + Math.random() - 2) / 2;
+      function makeDisk(count, lens) {
+        const g = new THREE.BufferGeometry();
+        const pos = new Float32Array(count * 3), rad = new Float32Array(count), ang = new Float32Array(count),
+          scl = new Float32Array(count), rnd = new Float32Array(count);
+        for (let i = 0; i < count; i++) {
+          let r;
+          if (lens) r = 1.13 + Math.pow(Math.random(), 2.2) * 1.15;
+          else {
+            const u = Math.random();
+            r = u < 0.18 ? 1.5 + Math.random() * 0.45 : (u < 0.92 ? 1.6 + Math.pow(Math.random(), 1.6) * 4.3 : 5.6 + Math.random() * 2.6);
+          }
+          rad[i] = r;
+          ang[i] = Math.random() * Math.PI * 2;
+          pos[i * 3 + 1] = lens ? gauss() * 0.02 : gauss() * 0.035 * Math.pow(r, 0.9);
+          scl[i] = (lens ? 0.65 : 0.55) + Math.pow(Math.random(), 3) * 2.2;
+          rnd[i] = Math.random();
+        }
+        g.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+        g.setAttribute('aRadius', new THREE.BufferAttribute(rad, 1));
+        g.setAttribute('aAngle', new THREE.BufferAttribute(ang, 1));
+        g.setAttribute('aScale', new THREE.BufferAttribute(scl, 1));
+        g.setAttribute('aRand', new THREE.BufferAttribute(rnd, 1));
+        return g;
+      }
+
+      const diskVS = `
+    uniform float uTime, uPixelRatio, uSize, uBoost;
+    attribute float aRadius, aAngle, aScale, aRand;
+    varying vec3 vColor;
+    varying float vAlpha;
+    vec3 palette(float t) {
+      vec3 hot = vec3(0.80, 1.0, 0.96), cy = vec3(0.024, 0.714, 0.831), em = vec3(0.063, 0.725, 0.506), bl = vec3(0.114, 0.306, 0.847);
+      if (t < 0.12) return mix(hot, cy, t / 0.12);
+      if (t < 0.45) return mix(cy, em, (t - 0.12) / 0.33);
+      return mix(em, bl, clamp((t - 0.45) / 0.55, 0.0, 1.0));
+    }
+    void main() {
+      float r = aRadius;
+      float w = 1.35 / pow(r, 1.5);          // Keplerian angular velocity
+      float ang = aAngle + uTime * w;
+    #ifdef LENS
+      vec3 p = vec3(cos(ang) * r, sin(ang) * r * 0.9, position.y);
+      float t = clamp((r - 1.1) / 1.3, 0.0, 1.0) * 0.55;
+      float dop = 1.0 + 0.55 * cos(ang);
+    #else
+      vec3 p = vec3(cos(ang) * r, position.y, sin(ang) * r);
+      p.y += sin(ang * 2.0 - uTime * 0.5 + r * 1.7) * 0.012 * r;
+      float t = clamp((r - 1.45) / 4.4, 0.0, 1.0);
+    #endif
+      vec4 mv = modelViewMatrix * vec4(p, 1.0);
+      gl_Position = projectionMatrix * mv;
+      gl_PointSize = aScale * uSize * uPixelRatio / max(-mv.z, 0.1);
+    #ifndef LENS
+      vec3 vel = normalize((modelViewMatrix * vec4(-sin(ang), 0.0, cos(ang), 0.0)).xyz);
+      float dop = 1.0 + 0.8 * vel.z;          // relativistic beaming
+    #endif
+      float streak = 0.55 + 0.45 * sin(ang * 5.0 + r * 6.0 + aRand * 6.2831);
+      float fl = 0.78 + 0.22 * sin(uTime * 3.0 + aRand * 50.0);
+      vColor = palette(t);
+      vAlpha = (1.0 - t * 0.55) * dop * streak * fl * (1.0 + uBoost * 0.7);
+    }`;
+      const diskFS = `
+    varying vec3 vColor;
+    varying float vAlpha;
+    void main() {
+      vec2 c = gl_PointCoord - 0.5;
+      float d = length(c);
+      if (d > 0.5) discard;
+      float a = (exp(-d * d * 40.0) + exp(-d * d * 9.0) * 0.4) * (1.0 - smoothstep(0.3, 0.5, d)) * vAlpha * 0.55;
+      vec3 col = min(vColor * a, vec3(1.0));
+      gl_FragColor = vec4(col, max(max(col.r, col.g), col.b));
+    }`;
+
+      const diskMat = new THREE.ShaderMaterial(Object.assign({ uniforms: shared, vertexShader: diskVS, fragmentShader: diskFS, transparent: true, depthWrite: false, depthTest: true }, ADD_BLEND));
+      const lensMat = new THREE.ShaderMaterial(Object.assign({ uniforms: shared, vertexShader: diskVS, fragmentShader: diskFS, transparent: true, depthWrite: false, depthTest: true, defines: { LENS: '' } }, ADD_BLEND));
+
+      const disk = new THREE.Points(makeDisk(mobile ? 12000 : 24000, false), diskMat);
+      disk.frustumCulled = false; disk.renderOrder = 2;
+      diskTilt.add(disk);
+
+      const lensRing = new THREE.Points(makeDisk(mobile ? 3500 : 7000, true), lensMat);
+      lensRing.frustumCulled = false; lensRing.renderOrder = 3;
+      root.add(lensRing);
+
+      // Sizing
+      function resize() {
+        const w = stage.clientWidth, h = stage.clientHeight;
+        renderer.setSize(w, h, false);
+        camera.aspect = w / h; camera.updateProjectionMatrix();
+        const halfH = 15 * Math.tan(THREE.MathUtils.degToRad(19));
+        const halfW = halfH * camera.aspect;
+        const s = Math.max(0.5, Math.min(1, (0.92 * halfW) / 6.2));
+        root.scale.setScalar(s);
+        shared.uSize.value = 46 * (h / 900) * s;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      let visible = true;
+      new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { rootMargin: '200px' }).observe(stage);
+
+      let last = performance.now(), phase = 0;
+      const speed = APP.reduced ? 0 : 1;
+      function loop(now) {
+        requestAnimationFrame(loop);
+        const dt = Math.min(0.05, (now - last) / 1000); last = now;
+        if (!visible || document.hidden) return;
+        shared.uBoost.value += (BH.boost - shared.uBoost.value) * Math.min(1, dt * 5);
+        phase += dt * speed * (1 + shared.uBoost.value * 0.6);
+        shared.uTime.value = phase;
+        root.rotation.y += ((APP.reduced ? 0 : APP.mouse.x) * 0.12 - root.rotation.y) * 0.04;
+        root.rotation.x += (-(APP.reduced ? 0 : APP.mouse.y) * 0.08 - root.rotation.x) * 0.04;
+        renderer.render(scene, camera);
+      }
+      requestAnimationFrame(loop);
+    })();
+  </script>
+
+  <!-- ============================================================
+     PART 2b: TRUE 3D VERTICAL ELLIPTICAL ORBIT FOR PROJECT CARDS
+============================================================= -->
+  <script>
+    (function orbit() {
+      const stage = document.getElementById('orbit-stage');
+      const cards = Array.from(stage.querySelectorAll('[data-orbit-card]'));
+      const N = cards.length, STEP = (Math.PI * 2) / N, TAU = Math.PI * 2;
+      const svg = document.getElementById('orbit-path');
+      const ellipses = svg.querySelectorAll('ellipse');
+      const idxEl = document.getElementById('orbit-index'), nameEl = document.getElementById('orbit-name');
+      const dots = Array.from(document.querySelectorAll('[data-dot]'));
+      const wrap = a => { a = (a + Math.PI) % TAU; if (a < 0) a += TAU; return a - Math.PI; };
+
+      let W = 0, H = 0, Rx = 0, Ry = 0, roll = 0, cr = 1, sr = 0;
+      function layout() {
+        W = stage.clientWidth; H = stage.clientHeight;
+        const cardH = Math.max(...cards.map(c => c.offsetHeight));
+        const mobile = W < 768;
+        Rx = mobile ? W * 0.05 : Math.min(W * 0.29, 370);
+        Ry = Math.max(130, H / 2 - cardH * 0.45 - 90);
+        roll = mobile ? 0 : -0.16;
+        cr = Math.cos(roll); sr = Math.sin(roll);
+        ellipses.forEach(e => {
+          e.setAttribute('cx', W / 2); e.setAttribute('cy', H / 2);
+          e.setAttribute('rx', Rx); e.setAttribute('ry', Ry);
+          e.setAttribute('transform', `rotate(${roll * 180 / Math.PI} ${W / 2} ${H / 2})`);
+        });
+      }
+      layout();
+      window.addEventListener('resize', layout);
+      if (document.fonts) document.fonts.ready.then(layout);
+
+      // Angle state: θ = auto + manual + scroll
+      const AUTO_SPEED = APP.reduced ? 0 : 0.12;
+      let auto = 0, curSpeed = AUTO_SPEED, manual = 0, manualTarget = 0, scrollA = 0, scrollTarget = 0;
+      let paused = APP.reduced, listView = false, focusWithin = false;
+      let hovering = false, dragging = false, pointerActive = false, pinned = false;
+      const theta = () => auto + manual + scrollA;
+      const thetaTarget = () => auto + manualTarget + scrollTarget;
+
+      // Hover: pause orbit + energise the singularity
+      cards.forEach(c => {
+        c.addEventListener('mouseenter', () => { hovering = true; BH.boost = 1; });
+        c.addEventListener('mouseleave', () => { hovering = false; BH.boost = 0; });
+      });
+
+      // Drag to spin
+      let lastX = 0, lastY = 0, startX = 0, startY = 0, pType = 'mouse', suppressClick = false;
+      stage.addEventListener('pointerdown', e => {
+        if (listView || e.button !== 0 || e.target.closest('button, a')) return;
+        pointerActive = true; pType = e.pointerType;
+        startX = lastX = e.clientX; startY = lastY = e.clientY;
+      });
+      window.addEventListener('pointermove', e => {
+        if (!pointerActive) return;
+        const dx = e.clientX - lastX, dy = e.clientY - lastY;
+        lastX = e.clientX; lastY = e.clientY;
+        if (!dragging && Math.hypot(e.clientX - startX, e.clientY - startY) > 6) {
+          if (pType === 'touch' && Math.abs(e.clientY - startY) > Math.abs(e.clientX - startX)) { pointerActive = false; return; }
+          dragging = true; stage.classList.add('is-dragging');
+        }
+        if (dragging) manualTarget += pType === 'touch' ? dx * 0.008 : dy * 0.006 + dx * 0.0025;
+      }, { passive: true });
+      window.addEventListener('pointerup', () => {
+        if (dragging) { suppressClick = true; setTimeout(() => { suppressClick = false; }, 50); }
+        pointerActive = false; dragging = false; stage.classList.remove('is-dragging');
+      });
+      window.addEventListener('pointercancel', () => { pointerActive = dragging = false; stage.classList.remove('is-dragging'); });
+      stage.addEventListener('click', e => { if (suppressClick) { e.preventDefault(); e.stopPropagation(); suppressClick = false; } }, true);
+
+      // Bring a specific node to the front
+      function focus(k) { manualTarget -= wrap(thetaTarget() - k * STEP); }
+      let frontIdx = 0;
+      document.getElementById('orbit-next').addEventListener('click', () => focus((frontIdx + 1) % N));
+      document.getElementById('orbit-prev').addEventListener('click', () => focus((frontIdx - 1 + N) % N));
+      dots.forEach(d => d.addEventListener('click', () => focus(+d.dataset.dot)));
+
+      // Wheel browsing keeps normal page scrolling; no pinned scroll trap.
+      stage.addEventListener('wheel', e => {
+        if (!listView && !paused && !hovering && !focusWithin) manualTarget += Math.max(-100, Math.min(100,e.deltaY)) * .002;
+      }, {passive:true});
+      stage.addEventListener('focusin', () => { focusWithin = true; });
+      stage.addEventListener('focusout', e => { focusWithin = stage.contains(e.relatedTarget); });
+      stage.addEventListener('keydown', e => {
+        if (listView || !['ArrowDown','ArrowRight','ArrowUp','ArrowLeft'].includes(e.key)) return;
+        e.preventDefault(); focus((frontIdx + (['ArrowDown','ArrowRight'].includes(e.key) ? 1 : N-1)) % N);
+      });
+      const pauseButton = document.getElementById('orbit-pause');
+      const viewButton = document.getElementById('orbit-view');
+      const updatePause = () => { pauseButton.textContent = paused ? 'Resume orbit' : 'Pause orbit'; pauseButton.setAttribute('aria-pressed', String(paused)); };
+      pauseButton.addEventListener('click', () => { paused = !paused; updatePause(); }); updatePause();
+      viewButton.addEventListener('click', () => {
+        listView = !listView; stage.classList.toggle('is-list', listView);
+        viewButton.textContent = listView ? 'Orbit view' : 'List view'; viewButton.setAttribute('aria-pressed', String(listView));
+        pauseButton.hidden = listView;
+        cards.forEach(c => { c.inert = false; c.removeAttribute('aria-hidden'); });
+        if (!listView) layout();
+        if(window.ScrollTrigger) ScrollTrigger.refresh();
+        if(APP.lenis) APP.lenis.resize();
+      });
+      let stageVisible = true;
+      new IntersectionObserver(([e]) => { stageVisible = e.isIntersecting; }).observe(stage);
+
+      // Render loop
+      let last = performance.now();
+      function setFront(i) {
+        if (i === frontIdx && idxEl.dataset.init) return;
+        idxEl.dataset.init = '1';
+        frontIdx = i;
+        idxEl.textContent = `NODE ${String(i + 1).padStart(2, '0')} / ${String(N).padStart(2, '0')}`;
+        nameEl.textContent = PROJECTS[i].title + ' — ' + PROJECTS[i].sub;
+        dots.forEach((d, j) => { d.classList.toggle('active', j === i); d.setAttribute('aria-pressed', String(j === i)); });
+        cards.forEach((c, j) => c.classList.toggle('is-front', j === i));
+      }
+
+      function tick(now) {
+        requestAnimationFrame(tick);
+        const dt = Math.min(0.05, (now - last) / 1000); last = now;
+        if (!stageVisible || document.hidden || listView) return;
+        const k = Math.min(1, dt * 4);
+        curSpeed = hovering || dragging || paused || focusWithin ? 0 : AUTO_SPEED;
+        auto += curSpeed * dt;
+        manual += (manualTarget - manual) * Math.min(1, dt * 6);
+        scrollA += (scrollTarget - scrollA) * Math.min(1, dt * 7);
+        const th = theta();
+
+        let best = -2, bestI = 0;
+        for (let i = 0; i < N; i++) {
+          const a = th - i * STEP;
+          const c = Math.cos(a), s = Math.sin(a);
+          const x0 = Rx * c, y0 = Ry * s;
+          const x = x0 * cr - y0 * sr, y = x0 * sr + y0 * cr;
+          const depth = (c + 1) / 2;                        // 0 = behind, 1 = in front
+          const scale = 0.75 + 0.30 * depth;                // 0.75 … 1.05
+          const opacity = 0.22 + 0.78 * Math.pow(depth, 1.3);
+          const z = c > 0 ? 21 + Math.round(c * 9) : 10 + Math.round((c + 1) * 9); // canvas sits at 20
+          const el = cards[i];
+          el.inert = c <= -0.2;
+          el.setAttribute('aria-hidden', String(c <= -0.2));
+          el.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0) translate(-50%, -50%) perspective(1100px) rotateX(${(-s * 16).toFixed(2)}deg) rotateY(${(c * -6).toFixed(2)}deg) scale(${scale.toFixed(4)})`;
+          el.style.opacity = opacity.toFixed(3);
+          el.style.zIndex = z;
+          el.style.filter = depth > 0.97 ? 'none' : `brightness(${(0.45 + 0.55 * depth).toFixed(3)}) saturate(${(0.6 + 0.4 * depth).toFixed(3)})`;
+          el.style.pointerEvents = c > -0.2 ? 'auto' : 'none';
+          if (c > best) { best = c; bestI = i; }
+        }
+        setFront(bestI);
+      }
+      requestAnimationFrame(tick);
+    })();
+  </script>
+</body>
+
+</html>
